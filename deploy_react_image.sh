@@ -1,6 +1,6 @@
 #!/bin/bash
 # deploy_react.sh
-# Full automation for Strapi deployment
+# Full automation for React deployment
 
 # Exit on error
 set -e
@@ -14,16 +14,10 @@ fi
 # Go to home directory
 cd ~
 
-# Clone custom Strapi deployment repo
-echo "Cloning Strapi deployment repo..."
-git clone https://github.com/Faikhan147/Strapi-headless-CMS || echo "Repo already exists, skipping clone"
+# Clone custom React deployment repo
+echo "Cloning React deployment repo..."
+git clone https://github.com/Faikhan147/Reactjs-Containerized-Application-Deployment || echo "Repo already exists, skipping clone"
 
-# Clone Strapi starter blog
-echo "Cloning Strapi starter blog..."
-git clone https://github.com/strapi/strapi-starter-blog.git || echo "Repo already exists, skipping clone"
-
-# Go to Strapi deployment repo
-cd Strapi-headless-CMS
 
 # Make setup script executable
 chmod 777 setup.sh
