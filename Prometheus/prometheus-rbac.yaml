@@ -28,7 +28,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: monitoring
+    namespace: prometheus
 roleRef:
   kind: ClusterRole
   name: prometheus-scrape-role
