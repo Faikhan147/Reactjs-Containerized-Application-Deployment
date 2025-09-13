@@ -30,8 +30,8 @@ aws configure
 aws eks update-kubeconfig --name React-Deployment-Cluster --region ap-south-1
 
 
-# Copy Dockerfile to Strapi starter blog
-cd ~/Reactjs-Containerized-Application-Deployment
+#  Dockerfile React App
+cd ~/Reactjs-Containerized-Application-Deployment/Application
 
 
 # Build Docker image
@@ -43,3 +43,15 @@ echo "Pushing Docker image..."
 docker push faisalkhan35/react-app:latest
 
 echo "Strapi Docker image deployed successfully!"
+
+# Deployment of react App
+cd ~/Reactjs-Containerized-Application-Deployment/Deployment
+kubectl apply -f namespace.yaml
+kubectl apply -f react-deployment.yaml
+kubectl apply -f lb.yaml
+
+# Deployment of Prometheus
+cd ~/Reactjs-Containerized-Application-Deployment/Deployment
+kubectl apply -f prometheus-daemonset.yaml
+kubectl apply -f prometheus-rbac.yaml
+kubectl apply -f prometheus-lb-service.yaml
