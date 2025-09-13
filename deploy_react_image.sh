@@ -55,3 +55,10 @@ cd ~/Reactjs-Containerized-Application-Deployment/Prometheus
 kubectl apply -f prometheus-daemonset.yaml
 kubectl apply -f prometheus-rbac.yaml
 kubectl apply -f prometheus-lb-service.yaml
+
+
+
+
+kubectl get namespaces
+kubectl get pods -n react-application
+kubectl get svc -n react-application
