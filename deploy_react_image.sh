@@ -31,7 +31,7 @@ aws eks update-kubeconfig --name React-Deployment-Cluster --region ap-south-1
 
 
 #  Dockerfile React App
-cd ~/Reactjs-Containerized-Application-Deployment/Application
+cd ~/Reactjs-Containerized-Application-Deployment/app
 
 
 # Build Docker image
