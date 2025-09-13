@@ -14,10 +14,6 @@ fi
 # Go to home directory
 cd ~
 
-# Clone custom React deployment repo
-echo "Cloning React deployment repo..."
-git clone https://github.com/Faikhan147/Reactjs-Containerized-Application-Deployment || echo "Repo already exists, skipping clone"
-
 
 # Make setup script executable
 chmod 777 setup.sh
@@ -31,20 +27,19 @@ echo "Configuring AWS CLI..."
 aws configure
 
 # Update the kubeconfig file
-aws eks update-kubeconfig --name Strapi-Deployment-Cluster --region ap-south-1
+aws eks update-kubeconfig --name React-Deployment-Cluster --region ap-south-1
 
 
 # Copy Dockerfile to Strapi starter blog
-cd ~/strapi-starter-blog
-echo "Copying Dockerfile..."
-cp ~/Strapi-headless-CMS/Dockerfile .
+cd ~/Reactjs-Containerized-Application-Deployment
+
 
 # Build Docker image
 echo "Building Docker image..."
-docker build -t faisalkhan35/strapi-app:latest .
+docker build -t faisalkhan35/react-app:latest .
 
 # Push Docker image to Docker Hub
 echo "Pushing Docker image..."
-docker push faisalkhan35/strapi-app:latest
+docker push faisalkhan35/react-app:latest
 
 echo "Strapi Docker image deployed successfully!"
