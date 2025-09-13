@@ -1,6 +1,0 @@
-{
-  "pageTitle": "Jest Test Report",
-  "outputPath": "./jest-html-report.html",
-  "includeFailureMsg": true,
-  "includeConsoleLog": true
-}
