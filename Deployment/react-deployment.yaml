@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
         - name: react-app
-          image: faisalkhan35/my-application:1
+          image: faisalkhan35/react-app:latest
