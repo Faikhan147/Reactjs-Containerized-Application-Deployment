@@ -62,3 +62,6 @@ kubectl apply -f prometheus-lb-service.yaml
 kubectl get namespaces
 kubectl get pods -n react-application
 kubectl get svc -n react-application
+
+kubectl get pods -n prometheus
+kubectl get svc -n prometheus
