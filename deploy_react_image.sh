@@ -12,7 +12,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Go to home directory
-cd ~
+cd ~/Reactjs-Containerized-Application-Deployment
 
 
 # Make setup script executable
