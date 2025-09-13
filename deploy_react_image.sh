@@ -51,7 +51,7 @@ kubectl apply -f react-deployment.yaml
 kubectl apply -f lb.yaml
 
 # Deployment of Prometheus
-cd ~/Reactjs-Containerized-Application-Deployment/Deployment
+cd ~/Reactjs-Containerized-Application-Deployment/Prometheus
 kubectl apply -f prometheus-daemonset.yaml
 kubectl apply -f prometheus-rbac.yaml
 kubectl apply -f prometheus-lb-service.yaml
